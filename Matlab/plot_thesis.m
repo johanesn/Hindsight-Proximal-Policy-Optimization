@@ -78,9 +78,25 @@ ppo_bitflipping_full = load('test_reward_bitflipping_ppo_full.mat');
 hppo_bitflipping_full = load('test_reward_bitflipping_hppo_full.mat');
 
 figure;
-scatter(ppo_bitflipping_full.timesteps, ppo_bitflipping_full.returns)
+
+index = (ppo_bitflipping_full.returns == -8.0);
+scatter (ppo_bitflipping_full.timesteps(index), ppo_bitflipping_full.returns(index), 'MarkerEdgeColor', (color_order(1,:)+color_order(2,:))/2)
+
 hold on
-scatter(hppo_bitflipping_full.timesteps, hppo_bitflipping_full.returns)
+index_conjugate = (ppo_bitflipping_full.returns ~= -8.0);
+scatter(ppo_bitflipping_full.timesteps(index_conjugate), ppo_bitflipping_full.returns(index_conjugate), 'MarkerEdgeColor', color_order(1,:))
+
+hold on
+
+index_conjugate = (hppo_bitflipping_full.returns ~= -8.0);
+scatter(hppo_bitflipping_full.timesteps, hppo_bitflipping_full.returns,'MarkerEdgeColor', color_order(2,:))
+
+hold on
+
+
+index = (hppo_bitflipping_full.returns == -8.0);
+scatter (hppo_bitflipping_full.timesteps(index), hppo_bitflipping_full.returns(index),'MarkerEdgeColor', (color_order(1,:)+color_order(2,:))/2)
+
 xlabel('Number of episodes')
 ylabel('Return')
 title('Bitflipping with n=8 Mean Return')
