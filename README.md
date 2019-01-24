@@ -12,7 +12,6 @@ The purpose of our proposed method in here is to embed subgoal for on-policy rei
 # Environment Description
 - OpenAI gym classical control 'Pendulum-v0'
 - Bit Flipping
-- OpenAI gym with mujoco 'FetchReach' (on-going)
 
 # Hardware Setting
 - Framework
