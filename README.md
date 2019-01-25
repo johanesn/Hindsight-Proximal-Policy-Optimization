@@ -27,7 +27,7 @@ The purpose of our proposed method in here is to embed subgoal for on-policy rei
 # Experimental Results
 
 ### Pendulum
-![PendulumReturn](/img/pendulumreturn.png = 100x200)
+![PendulumReturn](/img/pendulumreturn.png =100x200)
 Curve in here shows the evaluation of pendulum return 5 times and we take the average value. Result shows our model outperform original ppo and model-based goal generator can boost its sample efficiency.
 ![GoalDistance](/img/goaldistance.png)
 Result in here shows that our network can learn incrementally closer implicit curriculum while sample final method actually generate noisy like distance as expected.
