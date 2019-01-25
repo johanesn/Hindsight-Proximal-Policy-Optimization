@@ -29,10 +29,11 @@ The purpose of our proposed method in here is to embed subgoal for on-policy rei
 ### Pendulum
 <img src="/img/pendulumreturn.png" alt="pendulum return" width="600"/>
 Curve in here shows the evaluation of pendulum return 5 times and we take the average value. Result shows our model outperform original ppo and model-based goal generator can boost its sample efficiency.
-![GoalDistance](/img/goaldistance.png)
+
+<img src="/img/goaldistance.png" alt="goal distance" width="600"/>
 Result in here shows that our network can learn incrementally closer implicit curriculum while sample final method actually generate noisy like distance as expected.
 
 ### Bitflipping
-![BitflippingReturn](/img/bitflipping8return.png)
+<img src="/img/bitflipping8return.png" alt="bit flipping 8 return" width="600"/>
 
 Since this is discrete state and action spaces, the training result is not good, highly probable because of hyperparameter tuning. However, our method shows it can outperform original PPO. 
